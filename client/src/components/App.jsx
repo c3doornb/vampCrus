@@ -9,7 +9,6 @@ class App extends React.Component {
     this.state = {
       username: "",
     }
-    this.loggedIn = false
   }
 
   signIn(e) {
@@ -29,8 +28,7 @@ class App extends React.Component {
   render() {
     return(
       <div>
-        {this.state.loggedIn || <SignIn signIn={this.signIn.bind(this)} />}
-        {this.state.loggedIn && <GameWindow />}
+        <GameWindow />
       </div>
     )
   }
